@@ -1,48 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Image Gallery</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creative Image Gallery</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Professional Image Gallery</h1>
-
-    <p class="subtitle">
-        Explore a curated collection of professional photography and creative visuals.
+<header>
+    <h1>✨ Creative Image Gallery</h1>
+    <p>
+        Discover breathtaking photography, travel destinations,
+        cityscapes, and nature through a modern gallery experience.
     </p>
+</header>
 
-    <div class="gallery">
+<div class="search-box">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search images..."
+        onkeyup="searchImages()"
+    >
+</div>
 
-        <img src="https://picsum.photos/id/1015/600/400" alt="Image 1">
-        <img src="https://picsum.photos/id/1016/600/400" alt="Image 2">
-        <img src="https://picsum.photos/id/1018/600/400" alt="Image 3">
-        <img src="https://picsum.photos/id/1025/600/400" alt="Image 4">
-        <img src="https://picsum.photos/id/1035/600/400" alt="Image 5">
-        <img src="https://picsum.photos/id/1043/600/400" alt="Image 6">
-        <img src="https://picsum.photos/id/1050/600/400" alt="Image 7">
-        <img src="https://picsum.photos/id/1060/600/400" alt="Image 8">
+<div class="filters">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('city')">City</button>
+    <button onclick="filterImages('travel')">Travel</button>
+</div>
 
-        <img src="https://picsum.photos/id/1074/600/400" alt="Image 9">
-        <img src="https://picsum.photos/id/1084/600/400" alt="Image 10">
-        <img src="https://picsum.photos/id/1080/600/400" alt="Image 11">
-        <img src="https://picsum.photos/id/1069/600/400" alt="Image 12">
+<div class="gallery">
 
+    <div class="image-card nature">
+        <img src="https://picsum.photos/id/1015/600/400" alt="">
+        <h3>Mountain Escape</h3>
     </div>
 
-    <!-- Lightbox -->
-
-    <div class="lightbox" id="lightbox">
-
-        <span class="close">&times;</span>
-
-        <img class="lightbox-content" id="lightbox-img">
-
+    <div class="image-card nature">
+        <img src="https://picsum.photos/id/1016/600/400" alt="">
+        <h3>Forest View</h3>
     </div>
 
-    <script src="script.js"></script>
+    <div class="image-card nature">
+        <img src="https://picsum.photos/id/1018/600/400" alt="">
+        <h3>Nature Beauty</h3>
+    </div>
+
+    <div class="image-card city">
+        <img src="https://picsum.photos/id/1025/600/400" alt="">
+        <h3>Urban Skyline</h3>
+    </div>
+
+    <div class="image-card city">
+        <img src="https://picsum.photos/id/1035/600/400" alt="">
+        <h3>City Lights</h3>
+    </div>
+
+    <div class="image-card city">
+        <img src="https://picsum.photos/id/1043/600/400" alt="">
+        <h3>Modern Architecture</h3>
+    </div>
+
+    <div class="image-card travel">
+        <img src="https://picsum.photos/id/1050/600/400" alt="">
+        <h3>Adventure Time</h3>
+    </div>
+
+    <div class="image-card travel">
+        <img src="https://picsum.photos/id/1060/600/400" alt="">
+        <h3>Travel Dreams</h3>
+    </div>
+
+    <div class="image-card travel">
+        <img src="https://picsum.photos/id/1074/600/400" alt="">
+        <h3>Beautiful Journey</h3>
+    </div>
+
+    <div class="image-card nature">
+        <img src="https://picsum.photos/id/1084/600/400" alt="">
+        <h3>Green Paradise</h3>
+    </div>
+
+    <div class="image-card city">
+        <img src="https://picsum.photos/id/1080/600/400" alt="">
+        <h3>Night City</h3>
+    </div>
+
+    <div class="image-card travel">
+        <img src="https://picsum.photos/id/1069/600/400" alt="">
+        <h3>World Explorer</h3>
+    </div>
+
+</div>
+
+<div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightbox-img">
+</div>
+
+<button id="topBtn">⬆</button>
+
+<script src="script.js"></script>
 
 </body>
 </html>
